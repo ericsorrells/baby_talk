@@ -8,7 +8,7 @@ group :test do
 end
 gem 'bootstrap-sass'
 gem 'sprockets'
-
+gem 'bcrypt-ruby'
 
 gem 'rails_12factor', group: :production
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
