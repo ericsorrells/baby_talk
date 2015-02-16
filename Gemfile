@@ -1,5 +1,15 @@
 source 'https://rubygems.org'
 
+gem 'rspec'
+gem 'rspec-rails'
+group :test do  
+    gem 'selenium-webdriver', '2.35.1'  
+    gem 'capybara', '2.2.0'
+end
+gem 'bootstrap-sass'
+gem 'sprockets'
+
+
 gem 'rails_12factor', group: :production
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
