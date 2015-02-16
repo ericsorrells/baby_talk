@@ -1,1 +1,16 @@
-Header
+<header >
+      <%= link_to "Baby App", root_path, id: "logo" %>
+      <%= link_to "About", '/static_pages/about', id: "logo" %>       
+      <nav>
+            <%= link_to "Home", root_path %>
+            <% if signed_in? %>
+              <%= link_to "Users", '#' %> 
+              <%= link_to "Profile", current_user %> 
+              <%= link_to "Settings", '#' %>
+              <%= link_to "Sign Out", signout_path, method: "delete" %> 
+          <% else %>
+            <%= link_to "Sign In", signin_path %>
+            <%= link_to "Sign Up", signup_path %>            
+          <% end %> 
+      </nav>
+</header>
