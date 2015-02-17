@@ -1,0 +1,19 @@
+<h1>Answers#index</h1>
+
+Answered Questions:
+<br>
+<% @answers.each do |answer| %>
+  <%= Question.get_question_content(answer.question_id)%> - 
+  <%= link_to answer.content, edit_answer_path(answer) %> 
+<br>
+<%end%>
+
+<br>
+
+Unanswered Questions:
+<br>
+<% @unanswered_questions.each do |question| %>
+<%= Question.get_question_content(question) %> - 
+<%= link_to "Answer Question", new_answer_path(:id => question) %>
+<br>
+<% end %>
