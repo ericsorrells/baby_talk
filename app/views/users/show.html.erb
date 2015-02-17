@@ -1,3 +1,8 @@
 <h1>Users#show</h1>
 
-<%= @user.name %> - <%= @user.email %>
+              <% if current_user.admin?  %>
+              | <%= link_to "All Users", users_path %>
+              <% end %> 
+              <br>
+
+<%= @user.name %> - <%= @user.email %> 
