@@ -1,8 +1,10 @@
 class User < ActiveRecord::Base
-  before_save { self.email = email.downcase } #ensures email is formatted 
-  before_create :create_remember_token 
-    #before saving User to db, create remember token
+  has_many :answers, dependent: :destroy
 
+  #ensures email is formatted
+  before_save { self.email = email.downcase }
+  #before saving User to db, create remember token
+  before_create :create_remember_token 
 
   validates :name,  presence: true, length: { maximum: 50 } 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -14,6 +16,9 @@ class User < ActiveRecord::Base
   #validates presence, ensures they match, authenitcates by comparing PW & 
   #PW_digest
   has_secure_password 
+
+
+
 
   def User.new_remember_token
     #creates a new remember_token

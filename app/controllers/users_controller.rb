@@ -8,11 +8,12 @@ class UsersController < ApplicationController
   before_action :admin_user, only: :destroy
 
   def index
-    @users = User.all 
+    @users = User.all
   end
 
   def show
     @user = User.find(params[:id])
+    #@answers = @user.answers.paginate(page: params[:page])
   end
 
   def new
@@ -53,14 +54,6 @@ class UsersController < ApplicationController
   #user_params provide better security by controller access to attributes in private methods
     def user_params
       params.require(:user).permit(:name, :email, :phone, :password)
-    end
-
-    def signed_in_user
-      #if user not signed in, store location and redirect to sign_in URL
-      unless signed_in?
-        store_location
-        redirect_to signin_url, notice: "Please sign in."
-      end
     end
 
     def correct_user
