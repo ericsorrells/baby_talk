@@ -1,0 +1,31 @@
+Add A New Baby: <br>
+ID: <%=current_user.id%>
+
+
+<%= form_for(@baby) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name  %>
+  <br>
+
+  <%= f.label :sex %>
+  <%= f.select :sex, collecton: [['F','F'], ['M', 'M']]  %>
+  <br>
+
+  <%= f.label :month %>
+  <%= f.text_field :month %>
+  <br>
+
+  <%= f.label :day %>
+  <%= f.text_field :day %>
+  <br>
+
+  <%= f.label :year  %>
+  <%= f.text_field :year%> 
+  <br>
+
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+
+  <%= f.submit "Save Your Baby's Info!" %>  
+<% end %>
+<br>
+<%= link_to "Back to Your Profile", user_path(current_user.id) %>

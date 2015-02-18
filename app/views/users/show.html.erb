@@ -1,4 +1,3 @@
-<h1>Users#show</h1>
 
   <% if current_user.admin?  %>
   | <%= link_to "All Users", users_path %>
@@ -10,4 +9,13 @@
 <%= @user.email %> <br>
 <%= @user.phone %>
 </h3>
+<br>
+Babies:<br>
+<% @babies.each do |baby| %>
+<%= link_to baby.name, edit_baby_path(baby.id) %>
+<br>
+<% end %>
+<br>
+<%= link_to "Add A New Baby", new_baby_path %>
+
 <br>
