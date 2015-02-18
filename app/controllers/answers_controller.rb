@@ -29,7 +29,6 @@ class AnswersController < ApplicationController
 
   def create
     @answer = Answer.new(params.require(:answer).permit(:content, :question_id, :user_id))
-    # @question = Question.find(params["answer"]["question_id"])
     @question = Question.find(@answer.question_id)
     if @answer.save
         redirect_to answers_path, notice: 'Answer Was Successfully Created!'
