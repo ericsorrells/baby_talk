@@ -6,10 +6,12 @@ group :test do
     gem 'selenium-webdriver', '2.35.1'  
     gem 'capybara', '2.2.0'
 end
+
 gem 'bootstrap-sass'
 gem 'sprockets'
 gem 'bcrypt-ruby'
 gem 'pry', group: :development
+gem 'twilio-ruby'
 
 gem 'rails_12factor', group: :production
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

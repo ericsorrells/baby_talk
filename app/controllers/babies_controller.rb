@@ -6,7 +6,7 @@ class BabiesController < ApplicationController
   
   def update
     @baby = Baby.find(params[:id])
-    if @bean.update_attributes(params.require(:baby).permit(:name, :sex, :month, :day, :year))
+    if @baby.update_attributes(params.require(:baby).permit(:name, :sex, :month, :day, :year))
       redirect_to user_path(current_user.id), notice: "Your Baby's Info Was Sucessfully Edited!"
     else
       render 'new'

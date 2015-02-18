@@ -13,7 +13,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @babies = Baby.where(user_id: current_user.id)
+    @babies = @user.babies
   end
 
   def new
@@ -21,7 +21,10 @@ class UsersController < ApplicationController
   end
   
   def create
+    puts "CREATE: params = #{params}"
+    # "user"=>{"name"=>"Luke", "email"=>"luke@mail.com", "phone"=>"4049876543", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
     @user = User.new(user_params)
+    puts "About to save user: #{@user.inspect}"
     if @user.save
       sign_in @user
       flash[:success] = "Account Successfully Created"
@@ -53,7 +56,7 @@ class UsersController < ApplicationController
 
   #user_params provide better security by controller access to attributes in private methods
     def user_params
-      params.require(:user).permit(:name, :email, :phone, :password)
+      params.require(:user).permit(:name, :email, :phone, :password, :password_confirmation)
     end
 
     def correct_user
