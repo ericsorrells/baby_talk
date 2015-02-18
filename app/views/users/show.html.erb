@@ -2,7 +2,8 @@
   <% if current_user.admin?  %>
   | <%= link_to "All Users", users_path %>
   <% end %> 
-  
+
+<h3>Your Account Info:</h3>  
   <br>
 <h3>
 <%= @user.name %> <br>
