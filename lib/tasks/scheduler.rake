@@ -4,5 +4,3 @@ desc "Task to Send Out Questions Daily"
     Notification.send_text_message
     puts "done."
   end
-
-end
