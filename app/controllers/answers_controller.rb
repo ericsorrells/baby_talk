@@ -2,10 +2,7 @@ class AnswersController < ApplicationController
 
   def index
     @unanswered_questions = Question.get_unanswered_questions(current_user)
-                 @answers = Answer.where(user_id:current_user)
-  end
-
-  def show
+                 @answers = Answer.where(user_id: current_user)
   end
 
   def edit
@@ -38,7 +35,3 @@ class AnswersController < ApplicationController
   end
 
 end
-
-# def new
-#   @widget = Widget.new(:foo => params[:foo])
-# end

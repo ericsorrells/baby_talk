@@ -3,11 +3,10 @@ source 'https://rubygems.org'
 gem 'rspec'
 gem 'rspec-rails'
 group :test do  
-    gem 'selenium-webdriver', '2.35.1'  
-    gem 'capybara', '2.2.0'
+    gem 'selenium-webdriver' 
+    gem 'capybara'
 end
 
-gem 'bootstrap-sass'
 gem 'sprockets'
 gem 'bcrypt-ruby'
 gem 'pry', group: :development

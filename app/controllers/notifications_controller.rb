@@ -3,10 +3,10 @@ class NotificationsController < ApplicationController
    skip_before_action :verify_authenticity_token
  
   def notify
-    content     = params['Body']
-    number            = params['From']
-    phone            = Notification.format_phone_num(number) 
-    user        = User.find_user_by_phone_num(phone).first
+    content = params['Body']
+    number  = params['From']
+    phone   = Notification.format_phone_num(number) 
+    user    = User.find_user_by_phone_num(phone).first
     
     puts "CONTENT: #{content}"
     puts "NUMBER: #{number}"
@@ -44,13 +44,6 @@ class NotificationsController < ApplicationController
     })
 
     redirect_to answers_path 
-  end
-
-  def show    
-    @content = Notification.last.content
-  end
-
-  def index
   end
  
 end
