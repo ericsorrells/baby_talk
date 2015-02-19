@@ -1,33 +1,15 @@
 require 'rails_helper'
 
-RSpec.describe AnswersController, :type => :controller do
+describe AnswersController, type: :controller do
+    
+let(:user){ User.create(id: 1, name: 'Eric', email: 'eric@email.com', 
+                                phone: '4045555555', admin: nil) }
+let(:question){ Question.create(id: 3, sequence: 1, content: 'lorem ipsum') }
 
-  describe "GET index" do
-    it "returns http success" do
-      get :index
-      expect(response).to have_http_status(:success)
-    end
-  end
-
-  describe "GET show" do
-    it "returns http success" do
-      get :show
-      expect(response).to have_http_status(:success)
-    end
-  end
-
-  describe "GET new" do
-    it "returns http success" do
-      get :new
-      expect(response).to have_http_status(:success)
-    end
-  end
-
-  describe "GET edit" do
-    it "returns http success" do
+  describe 'GET #index' do
+    it 'renders Index' do
       get :edit
-      expect(response).to have_http_status(:success)
-    end
+      expect(response).to render_template(:edit)
+    end  
   end
-
 end

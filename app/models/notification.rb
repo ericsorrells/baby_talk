@@ -1,6 +1,5 @@
 class Notification < ActiveRecord::Base
 
-
   def self.format_phone_num(number)
     number = number[2..12].to_s
   end
@@ -28,9 +27,6 @@ class Notification < ActiveRecord::Base
       :body => "#{message}",  
       })
     end
-
   end
-
-
-
+  
 end

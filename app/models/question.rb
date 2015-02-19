@@ -1,7 +1,9 @@
 class Question < ActiveRecord::Base
   has_many    :answers, dependent: :destroy
-  #validates :user_id, presence: true
 
+  validates :sequence, presence: true   
+  validates :content,   presence: true
+  
   def self.get_answered_questions(user)
     answers = user.answers.pluck(:question_id)
     questions = Question.all.pluck(:id)
