@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'httparty'
 gem 'rspec'
 gem 'rspec-rails'
 group :test do  

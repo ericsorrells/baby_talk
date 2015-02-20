@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  get 'events/index'
+  get 'events/show_events'
   resources :users
   resources :sessions, only:  [:new, :create, :destroy]
   resources :questions, only: [:index, :show, :edit]
