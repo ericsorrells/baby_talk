@@ -7,9 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <% if signed_in? %>
-    Hello, <%=current_user.name%>
-  <% end %>
+
   <%= render 'layouts/header' %>
   
   <% flash.each do |key, value| %>

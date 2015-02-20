@@ -1,22 +1,32 @@
-Answered Questions:
-<br>
-<% @answers.each do |answer| %>
-  <%= Question.get_question_content(answer.question_id)%> - 
-  <%= link_to answer.content, edit_answer_path(answer) %> 
-<br>
-<%end%>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-lg-6" style="float:right"> 
+      <h4>Answered Questions:</h4>
+          <% @answers.each do |answer| %>
+      <div class="panel panel-default">
+        <div class="panel-heading"> 
+              <%= Question.get_question_content(answer.question_id)%>
+          </div>
+            <div class="panel-body">
+              <%= link_to answer.content, edit_answer_path(answer) %>
+              </div>
+          </div>
+      <%end%>
+        <br>
+    </div>
 
-<br>
 
-Unanswered Questions:
-<br>
-<% @unanswered_questions.each do |question| %>
-<%= Question.get_question_content(question) %> - 
-<%= link_to "Answer Question", new_answer_path(:id => question) %>
-<br>
-<% end %>
+    <div class="col-sm-12 col-lg-6" style="float:left"> 
+      <h4>Unanswered Questions:</h4>
+        <% @unanswered_questions.each do |question| %>
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <%= Question.get_question_content(question) %>  
+              <%= link_to "Answer Question", new_answer_path(:id => question), class: "float-right"%>
+            </div>
+          </div>
+        <% end %>
+      <br>
+    </div>
+  </div>
 
-
-<input class="toggle-box" id="header1" type="checkbox" >
-<label for="header1">Click here to read more!</label>
-<div>Lorem ipsum dolor sit amet, consectetuer adipiscing.</div>
