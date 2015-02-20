@@ -1,0 +1,21 @@
+<%= form_tag(events_show_events_path, :method => 'get') do %>
+
+    <%= select_tag(:categories, options_for_select([['Family & Education','115'], 
+        ['Community & Culture', '113'], ['Seasonal & Holiday', '116']])) %> 
+    <br>
+    Keywords:
+    <%= text_field_tag(:keyword) %>
+    <br>
+    City:
+    <%= text_field_tag(:city,) %>
+    <br>
+    State:
+    <%= text_field_tag(:state) %>
+    <br>
+    Time of Event:
+    <%= select_tag(:time, options_for_select([['This Week','this_week'], 
+        ['This Month', 'this_month']])) %>
+    <br>
+        
+    <%= submit_tag "Search", class: "btn btn-prime"%>
+<% end %>

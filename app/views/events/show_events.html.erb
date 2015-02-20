@@ -1,0 +1,17 @@
+<% if @events.empty? %>
+  <h3>Sorry! There Are No Events Currently Scheduled In Your Area</h3>
+<% else %>
+  <% @events.each do |event| %>
+    <br>
+    <strong><%= name(event) %></strong> 
+    <br>
+    <%= link_to 'Event Info', url(event) %> 
+    <br>
+    <%= street_address(event) %> 
+    <br>
+    <%= city(event) %>, <%= state(event) %>  <%= zip(event) %> 
+    <br>
+    Time: <%= time(event) %>
+    <br>
+  <% end %>
+<% end %>
