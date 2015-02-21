@@ -1,31 +1,25 @@
-Add A New Baby: <br>
-ID: <%=current_user.id%>
-
-
-<%= form_for(@baby) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name  %>
-  <br>
-
-  <%= f.label :sex %>
-  <%= f.select :sex, collecton: [['F','F'], ['M', 'M']]  %>
-  <br>
-
-  <%= f.label :month %>
-  <%= f.text_field :month %>
-  <br>
-
-  <%= f.label :day %>
-  <%= f.text_field :day %>
-  <br>
-
-  <%= f.label :year  %>
-  <%= f.text_field :year%> 
-  <br>
-
-  <%= f.hidden_field :user_id, :value => current_user.id %>
-
-  <%= f.submit "Save Your Baby's Info!" %>  
-<% end %>
-<br>
-<%= link_to "Back to Your Profile", user_path(current_user.id) %>
+ <div class="container" >
+    <div class="row">
+      <div class="col-xs-12 center"> 
+        <div class="page-header">
+          <h3>Add A New Baby:</h3> 
+        </div>
+          <%= form_for(@baby) do |f| %>
+            <%= f.text_field :name, placeholder: "Name", class: "field_format field_width margin"   %>
+            <br>
+            <%= f.select :sex, options_for_select([['Female','F'], ['Male', 'M']]), {}, class: "btn btn-primary dropdown-toggle field_width margin"  %>
+            <br>
+            <%= f.text_field :month, placeholder: "Month", class: "field_format field_width margin"  %>
+            <br>
+            <%= f.text_field :day, placeholder: "Day", class: "field_format field_width margin"  %>
+            <br>
+            <%= f.text_field :year, placeholder: "Year", class: "field_format field_width margin" %> 
+            <br>
+            <%= f.hidden_field :user_id, :value => current_user.id %>
+            <%= f.submit "Save Your Baby's Info!", class: "btn btn-primary field_format field_width margin"  %>  
+          <% end %>
+          <br>
+          <%= link_to "Back to Your Profile", user_path(current_user.id) %>
+        </div>
+    </div>
+</div>

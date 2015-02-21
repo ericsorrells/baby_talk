@@ -1,14 +1,15 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-12 col-lg-6" style="float:right"> 
+    <div class="col-sm-12 col-lg-6" class="float_right"> 
       <h4>Answered Questions:</h4>
           <% @answers.each do |answer| %>
-      <div class="panel panel-default">
+      <div class="panel panel-primary">
         <div class="panel-heading"> 
-              <%= Question.get_question_content(answer.question_id)%>
-          </div>
+              <%= Question.get_question_content(answer.question_id)%> 
+              <%= link_to "Edit Answer", edit_answer_path(answer), class: "float_right black_text" %>
+            </div>
             <div class="panel-body">
-              <%= link_to answer.content, edit_answer_path(answer) %>
+              <%= answer.content %>
               </div>
           </div>
       <%end%>
@@ -16,17 +17,18 @@
     </div>
 
 
-    <div class="col-sm-12 col-lg-6" style="float:left"> 
+    <div class="col-sm-12 col-lg-6" class="float_left"> 
       <h4>Unanswered Questions:</h4>
         <% @unanswered_questions.each do |question| %>
           <div class="panel panel-default">
             <div class="panel-body">
               <%= Question.get_question_content(question) %>  
-              <%= link_to "Answer Question", new_answer_path(:id => question), class: "float-right"%>
+              <%= link_to "Answer Question", new_answer_path(:id => question), class: "float_right"%>
             </div>
           </div>
         <% end %>
       <br>
     </div>
   </div>
+</div>
 
