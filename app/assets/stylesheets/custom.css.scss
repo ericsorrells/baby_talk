@@ -1,5 +1,11 @@
 @import "bootstrap";
 
+.event_header_font { 
+  padding: 0px; 
+  margin:0px;
+  font-size: 15pt;
+  font-weight: bold;
+  }
 
 /* Colors */
 .blue {
@@ -15,4 +21,20 @@
   }
 }
 
-.float-right {float:right;}
+.center { text-align:center }
+
+.float_right {float:right;}
+
+.float_left {float:left;}
+
+.black_text { color:black }
+
+.width { width: 100% }
+
+.field_width { width: 500px; }
+
+.submit_width { width: 33% }
+
+.margin { margin: 5px }
+
+.height { height: 80px; }

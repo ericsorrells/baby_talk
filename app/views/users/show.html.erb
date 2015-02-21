@@ -1,22 +1,42 @@
 
-  <% if current_user.admin?  %>
-  | <%= link_to "All Users", users_path %>
-  <% end %> 
+<% if current_user.admin?  %>
+| <%= link_to "All Users", users_path %>
+<% end %> 
 
-<h3>Your Account Info:</h3>  
-  <br>
-<h3>
-<%= @user.name %> <br>
-<%= @user.email %> <br>
-<%= @user.phone %>
-</h3>
-<br>
-Babies:<br>
-<% @babies.each do |baby| %>
-<%= link_to baby.name, edit_baby_path(baby.id) %>
-<br>
-<% end %>
-<br>
-<%= link_to "Add A New Baby", new_baby_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-lg-6 float_left" >
+      <div class="page-header">
+        <h3>Your Account Info: </h3>
+      </div>
+        <div> 
+          <h3 class="black_text"><%= @user.name %></h3>
+          Email: <%= @user.email %> <br>
+          Phone: <%= @user.phone %>
+            <br>
+            <br>
+        </div>
+    </div>
+ 
+  <div class="col-sm-12 col-lg-6 float_right">
+    <div class="page-header">
+      <h3>Your Children: </h3>
+    </div>
+      <div>
+        <% @babies.each do |baby| %>
+        <h3><%= link_to baby.name, edit_baby_path(baby.id), class: "black_text" %></h3>
+        <br>
+        <% end %>
+      </div>  
+    </div>
+  </div>
 
-<br>
+  <div class="row">
+    <div class="col-sm-12 col-lg-6 float_left" >
+      <%= link_to "Edit Your Profile", edit_user_path(current_user), class: "btn btn-primary width" %>
+    </div>
+
+    <div class="col-sm-12 col-lg-6 float_left" >
+        <%= link_to "Add A New Baby", new_baby_path, class: "btn btn-primary width" %>
+    </div>
+</div>

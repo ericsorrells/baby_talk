@@ -1,13 +1,20 @@
-
-<%= form_for(:session, url: sessions_path) do |f| %>
-  <%= f.label :email %>
-  <%= f.text_field :email %>
-  <br>
-
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-
-  <%= f.submit "Sign In", class: 'btn btn-large btn-primary' %>
-<% end %>
-
-<p> New User? <%= link_to "Sign Up Here", new_user_path %></p>
+ <div class="container">
+    <div class="row">
+      <div class="col-xs-12 center"> 
+        <div class="page-header">
+          <h3>Sign In</h3>
+        </div>
+          <%= form_for(:session, url: sessions_path) do |f| %>
+            <%= f.text_field :email, class: "field_width", placeholder: "Email"  %> 
+            <br>
+            <br>
+            <%= f.password_field :password , class: "field_width", placeholder: "Password" %> 
+            <br>
+            <br>
+            <%= f.submit "Sign In", class: 'btn btn-large btn-primary field_width' %>
+          <% end %>
+          <br>
+          <p> <%= link_to "New User? Sign Up Here", new_user_path, class: "btn btn-large btn-primary field_width" %></p>
+    </div>
+  </div>          
+</div>          

@@ -1,22 +1,26 @@
-Search Eventbrite To Find Family Events In Your Area:
-<%= form_tag(events_show_events_path, :method => 'get') do %>
+ <div class="container" >
+    <div class="row">
+      <div class="col-xs-12 center"> 
+        <div class="page-header">
+            <h3>Search Eventbrite To Find Family Events In Your Area:</h3>
+        </div>
+                <%= form_tag(events_show_events_path, :method => 'get') do %>
 
-    <%= select_tag(:categories, options_for_select([['Family & Education','115'], 
-        ['Community & Culture', '113'], ['Seasonal & Holiday', '116']])) %> 
-    <br>
-    Keywords:
-    <%= text_field_tag(:keyword) %>
-    <br>
-    City:
-    <%= text_field_tag(:city,) %>
-    <br>
-    State:
-    <%= text_field_tag(:state) %>
-    <br>
-    Time of Event:
-    <%= select_tag(:time, options_for_select([['This Week','this_week'], 
-        ['This Month', 'this_month']])) %>
-    <br>
-        
-    <%= submit_tag "Search", class: "btn btn-prime"%>
-<% end %>
+                <%= select_tag :categories, options_for_select([['Family & Education','115'], 
+                    ['Community & Culture', '113'], ['Seasonal & Holiday', '116']]), class: "btn btn-primary dropdown-toggle field_width margin" %> 
+                <br>
+                <%= text_field_tag :keyword, nil, placeholder: "Keyword", class: "field_format field_width margin" %>
+                <br>
+                <%= text_field_tag :city, nil, placeholder: 'City', class: "field_format field_width margin" %>
+                <br>
+                <%= text_field_tag :state, nil, placeholder: 'State', class: "field_format field_width margin" %>
+                <br>
+                <%= select_tag :time, options_for_select([['This Week','this_week'], 
+                    ['This Month', 'this_month']]), class: "btn btn-primary dropdown-toggle field_width margin" %>
+                <br>
+                    
+                <%= submit_tag "Search", class: "btn btn-primary field_width margin"%>
+            <% end %>
+        </div>
+    </div>
+</div>

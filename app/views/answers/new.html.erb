@@ -1,9 +1,20 @@
-<%= @question.content %><br>
-<%= form_for @answer do |f| %>
-    <%= f.text_area :content %> <br>
-    <%= f.hidden_field :question_id, :value => @question.id %>
-    <%= f.hidden_field :user_id, :value => current_user.id %>    
-    <%= f.submit "Edit Answer!" %>
-<% end %>
-<%= link_to "Back to Index", answers_path %>
-<br>
+
+ <div class="container">
+    <div class="row">
+      <div class="col-xs-12 center"> 
+        <div class="page-header">
+          <h3><%= @question.content %></h3><br>
+        </div>
+              <%= form_for @answer do |f| %>
+                <%= f.text_area :content, class: "field_width height" %> <br>
+                <%= f.hidden_field :question_id, :value => @question.id %>
+                <%= f.hidden_field :user_id, :value => current_user.id %>    
+                <%= f.submit "Edit Answer!", class: 'btn btn-primary field_width' %>
+                <br>
+            <% end %>
+          <br>
+        <%= link_to "Back to Index", answers_path, class: 'btn btn-primary field_width' %>
+      <br>
+    </div>
+  </div>
+</div>
