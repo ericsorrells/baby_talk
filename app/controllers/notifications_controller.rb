@@ -8,20 +8,9 @@ class NotificationsController < ApplicationController
     phone   = Notification.format_phone_num(number) 
     user    = User.find_user_by_phone_num(phone).first
     
-    puts "CONTENT: #{content}"
-    puts "NUMBER: #{number}"
-    puts "PHONE: #{phone}"
-    puts "USER: #{user}"
-
     question_id = Question.get_unanswered_questions(user)[0]
 
     Answer.create(:content => "#{content}", :user_id => user.id, :question_id => question_id)
-  
-    puts "CONTENT: #{content}"
-    puts "PHONE: #{phone}"
-    puts "PHONE CLASS: #{phone.class}"
-    puts "USER_ID: #{user.id}"
-    puts "QUESTION_ID: #{question_id}"
   end
    
   def send_text_message   

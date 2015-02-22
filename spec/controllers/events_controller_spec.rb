@@ -1,12 +1,11 @@
 require 'rails_helper'
 
-RSpec.describe EventsController, :type => :controller do
-
-  describe "GET index" do
-    it "returns http success" do
-      get :index
-      expect(response).to have_http_status(:success)
+describe EventsController do
+  
+  describe 'GET #show_events' do
+    it 'renders show_events' do
+      get :show_events
+      expect(response).to render_template(:show_events)
     end
   end
-
 end

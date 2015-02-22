@@ -1,10 +1,12 @@
+<% provide(:title, 'Your Answers') %> 
+
 <div class="container">
-  <div class="row">
-    <div class="col-sm-12 col-lg-6" class="float_right"> 
+  <div class="row"> 
+    <div class="col-sm-12 col-lg-6" class="float_right panel_color"> 
       <h4>Answered Questions:</h4>
           <% @answers.each do |answer| %>
       <div class="panel panel-primary">
-        <div class="panel-heading"> 
+        <div class="panel-heading panel_color"> 
               <%= Question.get_question_content(answer.question_id)%> 
               <%= link_to "Edit Answer", edit_answer_path(answer), class: "float_right black_text" %>
             </div>

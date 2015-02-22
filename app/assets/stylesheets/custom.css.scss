@@ -1,5 +1,8 @@
 @import "bootstrap";
 
+$lightGray: #999;
+$grayLight: 999;
+
 .event_header_font { 
   padding: 0px; 
   margin:0px;
@@ -7,10 +10,19 @@
   font-weight: bold;
   }
 
+
 /* Colors */
 .blue {
   background-color: #99CCFF;
 }
+
+/* Bootstrap Overrides */
+
+.no_padding {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
 
 /* Forms */
 #error_explanation {
@@ -20,21 +32,100 @@
     margin: 0 0 18px 0;
   }
 }
+.field_with_errors {
+  @extend .has-error;
+}
 
-.center { text-align:center }
+
+
+/* Panel Heading Color */
+.panel > .panel-heading {
+    background-image: none;
+    background-color: #58718e;
+}
+
+
+  /* Navbar Customization */
+
+.navbar{ 
+    background-image: none;
+}
+
+.navbar-custom {
+  background-color:#80a1c5;
+  color:#80a1c5;
+  border-radius:0;
+  margin-bottom: 0px;
+}
+
+.navbar-custom .navbar-nav > li > a {
+    color:#fff;
+}
+.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+    color: #5e8fc7;
+    background-color:transparent;
+}
+.navbar-custom .navbar-brand {
+    color:#80a1c5;
+}
+
+.navbar-custom .navbar-toggle {
+    background-color:#5e8fc7;
+}
+
+
+  /* Bootstrap Buttons */
+.btn-primary { 
+  background-image: none;
+  border-color: #87a6b1; 
+  background-color: #87a6b1;
+}
+
+.btn-primary:hover { 
+  border-color: #669db0; 
+  background-color: #669db0; 
+}
+
+  /* Various Other*/
+
+.center { text-align:center; }
 
 .float_right {float:right;}
 
 .float_left {float:left;}
 
-.black_text { color:black }
+.black_text { color: black; }
 
-.width { width: 100% }
+.width { width: 100%; }
 
 .field_width { width: 500px; }
 
-.submit_width { width: 33% }
+.submit_width { width: 33%; }
 
-.margin { margin: 5px }
+.margin { margin: 5px; }
 
 .height { height: 80px; }
+
+.footer_line {
+color: #f00;
+background-color: #80a1e5;
+height: 10px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.logo_text {
+  font_family: Verdana;
+  font-size: 50px;
+  color: black;
+  float:left;
+}
+
+.logo_text_small {
+  font-family: Verdana;
+  float: left;
+  color: black;
+  font-size: 13px;
+  padding-left: 10px;
+  margin-top: 42px;
+}

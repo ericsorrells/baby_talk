@@ -5,6 +5,9 @@ class AnswersController < ApplicationController
                  @answers = Answer.where(user_id: current_user)
   end
 
+  def show
+  end
+
   def edit
     @question = Answer.find(params[:id]).question
     @answer   = Answer.find(params[:id]) 

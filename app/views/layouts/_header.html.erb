@@ -1,18 +1,21 @@
-<%= link_to root_path do %>
-<%= image_tag'Logo.png', height: '150px', width: '255px' %>
-<% end %>
+ <div class="container">
+    <div class="row">
+    <%= link_to "memori", root_path, :class => "logo_text" %>
+    <h6 class="logo_text_small">online baby journal via text message</h6>
+  </div>
+</div>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
+
+<nav class="navbar navbar-custom">
+  <div class="container-fluid ">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
+    <div class="navbar-header navbar-custom">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"></a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

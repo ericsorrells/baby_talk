@@ -1,18 +1,25 @@
 require 'rails_helper'
 
-describe 'users page' do
+describe "User pages" do
   subject { page }
 
-  describe 'show' do
-  let(:user) { User.new(name: "John Smith", email: "john@email.com", 
-                        phone: '404555555', password: "foobar", 
-                        password_confirmation: "foobar") }  
-
-  before { visit user_path }
-
-  it { should have_title{user.user_name}}
-  it { should have_selector('h1', text: user.name)}
+  describe "signup page" do
+    before { visit signup_path }
+    it { should have_content('Sign Up') }
   end
+
+  describe "signin page" do
+    before { visit signin_path }
+    it { should have_content('Sign In')}
+  end
+
+  #  describe "show page" do
+  #   let(:user) { User.new(id: 5, name: "John Smith", email: "john@email.com", 
+  #                        phone: '404555555', password: "foobar", 
+  #                        password_confirmation: "foobar") } 
+  #   before { visit user_path(user.id) }
+  #   it { should have_content('Your Profile') }
+  # end
 
 end
 

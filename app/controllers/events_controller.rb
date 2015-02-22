@@ -11,7 +11,7 @@ class EventsController < ApplicationController
     event_state = params[:state]
     event_time = params[:time]
     
-    @events = Event.events(event_category, event_keyword, event_city, event_state.upcase, event_time)
+    @events = Event.events(event_category, event_keyword, event_city, event_state, event_time)
 
   end
   

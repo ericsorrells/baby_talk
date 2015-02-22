@@ -1,0 +1,17 @@
+<% provide(:title, "Home") %> 
+<div class="container-fluid">
+  <div class="row home_background_color">
+    <div class="col-sm-12 col-lg-6 no_padding">
+      <%= image_tag "beach.jpg", class: "home_image" %>
+    </div>
+    <div class="col-sm-12 col-lg-6 position_home_text no_padding">
+      <h3 class="h3_home">never miss a memory</h3>
+      <hr width="60%">
+      <h4 class="h4_home">make a baby journal on your time</h4>
+      <h4 class="h4_home" style="padding: 0px">one text question a day,</h4>
+      <h4 class="h4_home" style="padding: 0px">answer when you are able!</h4>   
+      <br>
+      <%= link_to "sign up today", answers_path, class: 'btn btn-primary btn_home_styling'%> 
+    </div>
+  </div>
+<div>
