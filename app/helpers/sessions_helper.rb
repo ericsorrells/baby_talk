@@ -1,4 +1,5 @@
 module SessionsHelper
+  
 
   def sign_in(user)
     #create a new token:

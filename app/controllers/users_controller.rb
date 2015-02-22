@@ -22,12 +22,11 @@ class UsersController < ApplicationController
   
   def create
     puts "CREATE: params = #{params}"
-    # "user"=>{"name"=>"Luke", "email"=>"luke@mail.com", "phone"=>"4049876543", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
     @user = User.new(user_params)
     puts "About to save user: #{@user.inspect}"
     if @user.save
       sign_in @user
-      flash[:success] = "Account Successfully Created"
+      flash[:success] = "Account Successfully Created!"
       redirect_to @user
     else
       render 'new'
@@ -39,7 +38,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update_attributes(user_params)
-      flash[:success] = "Profile updated"
+      flash[:success] = "Profile Updated!"
       redirect_to @user
     else
       render 'edit'

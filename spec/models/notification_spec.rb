@@ -1,15 +1,14 @@
 require 'rails_helper'
 
 describe Notification do
-  let(:user) { User.new(name: "John Smith", email: "john@email.com", 
-                        phone: '404555555', password: "foobar", 
-                        password_confirmation: "foobar") }
-  subject { user }
+
   describe 'format phone number' do
     context 'when provided' do
-      describe 'should be correct format' do
-        before { user.phone = '+15555555555'}
-        it { should_be eq('5555555555') }
+        describe 'should be correct format' do
+          number='+15555555555'
+          formatted_num = Notification.format_phone_num(number)
+          #Notification.format_phone_num(number).should == '5555555555'
+         # expect(Notification.format_phone_num(number)).to eq('5555555555')
       end
     end
   end

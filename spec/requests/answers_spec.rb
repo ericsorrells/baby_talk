@@ -1,14 +1,14 @@
 require 'rails_helper'
 
-describe 'answer pages' do
+describe "Answer Pages" do
   subject { page }
 
-  describe 'home page' do 
-    before { answers_path }
+  describe "show" do
+    let(:answer1) {Answer.new( id: 41, content: 'lorem ipsum', user_id: 5, question_id: 5 )}  
+    before { visit answer_path(answer1.id)}
 
-    it { should have_title('Questions') }
-    it { should have_selector('h1', text: 'Your Questions and Answers')}
+    it { should have_title('Show Answer') }
   end
 
 
-end 
+end

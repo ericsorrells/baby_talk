@@ -1,34 +1,57 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Project 2 README Requirements and Example
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Your README.md should include
 
-Question.first.answers
-Answer.where(question_id:1).count
-Question.where(sequence:1).first.id.answer [all answers where question sequence is 1]
-User.find(1).answers [all answers from user 1]
-user.microposts [get all users microposts] => u.answers
+Overview - Description of project
+Links:
+Heroku page
+Trello Board
+GitHub project
+User Stories
+Technologies Used
+Diagrams (embedded or links):
+ERD
+wireframes (picture or link to moqups, etc)
+
+General Assembly WDI February 23, 2015 Project 2
+
+Overview:
+
+HelloWorld is a web application that allows users to easily create a baby journal of important memories. Parents with newborns are quite busy, and don't often have the time to fill out or record all the memories they would like to include in their baby journal. The journals often remain incomplete or go completely unused. HelloWorld makes the process of maintaining memories easier for parents by sending a single text message containing a single question from the baby journal each day. The user can respond to that question via text as well, and the site will log their responses. Users can then update their answers at any time. By the end, they will have answered every question in a typical baby journal, and have a full record of their memories over this time. In addition, users can search the Eventbrite API of events their area to help make new memories with their growing family.
+
+HelloWorld was developed as a project for the January 2015 General Assembly Web Development Immersive course. It was developed over a week-long sprint to gain experience with authentication/authroziation, ActiveRecord relations, APIs, and CRUD applications.
+
+Technologies Used
+
+Ruby 2.1.2p95
+Rails 4.2.0
+PostgreSQL Database
+Heroku (and Heroku Scheduler)
+Git/Github
+Authentication & Authorization from scratch using b-crypt-ruby
+Twilio API to send & receive text messages
+Eventbrite API & HTTParty
+Testing using rspec-rails and capybara
+Front-end design & development from scratch
+
+User Stories Completed:
+As a User I want to be able to Sign In securely to make sure my personal info is protected
+As a User I want to be able to see all my questions in one place to help organize the process
+As a User I want to be able to send/receive text messages with questions/answers to make keeping track of journal questions easier
+As a User I want to be able to Sign Out and be sure my session has ended
+As a User I would like to read an About page so that I can learn more about how the site works
+As a User I want to be able to see a list of events in my area to help make new memories for me and my family
+As a User I want to be able to update my profile to make sure the information is current
+As a User I want to be able to add children to my profile, and update their info as needed 
+As a User I would like to be able to update the information on my children as they get older
+As an Admin, I would like to use Heroku Scheduler to make send texts to keep me from having to do so manually
+
+Links:
+Production Site on Heroku:
+Github:
+Trello
+
+Process Documents:
+ERD
+Wireframes

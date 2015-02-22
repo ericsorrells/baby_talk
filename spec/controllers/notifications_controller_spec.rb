@@ -1,3 +1,1 @@
-require 'rails_helper'
-
-#NOT USED
+#NO VIEWS TO RENDER
