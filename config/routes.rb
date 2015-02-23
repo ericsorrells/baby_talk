@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root 'static_pages#home'
+  get 'static_pages/about'
   get 'events/index'
   get 'events/show_events'
   resources :users
@@ -10,11 +12,9 @@ Rails.application.routes.draw do
   resources :notifications
   post 'notifications/notify', to: 'notifications#notify'
   post 'notifications/send_text_message', to: 'notifications#send_text_message'
-  root  'static_pages#home'
   match '/signup',  to: 'users#new', via: 'get'
   match '/signin',  to: 'sessions#new', via: 'get'
   match '/signout', to: 'sessions#destroy', via: 'delete'
-  get 'static_pages/about'
 
   # get 'users/new'
 

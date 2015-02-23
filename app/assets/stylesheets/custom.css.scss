@@ -98,11 +98,13 @@ $grayLight: 999;
 
 .width { width: 100%; }
 
-.field_width { width: 500px; }
+.field_width { 
+  width: 500px; 
+  margin-bottom: 10px; }
 
 .submit_width { width: 33%; }
 
-.margin { margin: 5px; }
+.margin { margin-bottom: 10px; }
 
 .height { height: 80px; }
 
@@ -110,8 +112,8 @@ $grayLight: 999;
 color: #f00;
 background-color: #80a1e5;
 height: 10px;
-  margin: 0px;
-  padding: 0px;
+margin: 0px;
+padding: 0px;
 }
 
 .logo_text {
