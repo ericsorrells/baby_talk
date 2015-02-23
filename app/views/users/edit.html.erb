@@ -13,21 +13,30 @@
             <%= f.text_field :name, :placeholder => "Name", :size => 50  %>
           </div>
           <div class="form-group"> 
-            <%= f.text_field :email, :placeholder => "Email", class: "field_format", :size => 50  %>
+            <%= f.text_field :email, :placeholder => "Email", 
+              class: "field_format", :size => 50  %>
           </div>
           <div class="form-group">
-            <%= f.text_field :phone, class: "field_format", :placeholder => "Phone", :size => 50 %>
+            <%= f.text_field :phone, 
+              class: "field_format", :placeholder => "Phone", :size => 50 %>
           </div>
           <div class="form-group">
-            <%= f.password_field :password, :placeholder => "Password", :size =>50 %>
+            <%= f.password_field :password, :placeholder => "Password", 
+              :size =>50 %>
           </div>
           <div class="form-group">
-            <%= f.password_field :password_confirmation, :placeholder => "Password Confirmation", :size => 50 %>
+            <%= f.password_field :password_confirmation, 
+              :placeholder => "Password Confirmation", :size => 50 %>
           </div>
-            <%= f.submit "Update Account", class: "btn btn-large btn-primary submit_width" %>
+            <%= f.submit "Update Your Profile", 
+              class: "btn btn-large btn-primary submit_width" %>
             <% end  %>
           </div>
-        </form>
+
+          <div>
+            <%= link_to "Delete Account", @user, method: :delete, 
+              data: { confirm: 'Are you sure?' }, 
+              class: "btn btn-large btn-danger submit_width" %>
       </div>
     </div>
  </div>   

@@ -1,26 +1,10 @@
-Project 2 README Requirements and Example
-
-
-Your README.md should include
-
-Overview - Description of project
-Links:
-Heroku page
-Trello Board
-GitHub project
-User Stories
-Technologies Used
-Diagrams (embedded or links):
-ERD
-wireframes (picture or link to moqups, etc)
-
 General Assembly WDI February 23, 2015 Project 2
 
 Overview:
 
-HelloWorld is a web application that allows users to easily create a baby journal of important memories. Parents with newborns are quite busy, and don't often have the time to fill out or record all the memories they would like to include in their baby journal. The journals often remain incomplete or go completely unused. HelloWorld makes the process of maintaining memories easier for parents by sending a single text message containing a single question from the baby journal each day. The user can respond to that question via text as well, and the site will log their responses. Users can then update their answers at any time. By the end, they will have answered every question in a typical baby journal, and have a full record of their memories over this time. In addition, users can search the Eventbrite API of events their area to help make new memories with their growing family.
+memori is a web application that allows users to easily create a baby journal of important memories. Parents with newborns are quite busy, and don't often have the time to fill out or record all the memories they would like to include in their baby journal. The journals often remain incomplete or go completely unused. memori makes the process of maintaining memories easier for parents by sending a single text message containing a single question from the baby journal each day. The user can respond to that question via text as well, and the site will log their responses. Users can then update their answers at any time. By the end, they will have answered every question in a typical baby journal, and have a full record of their memories over this time. In addition, users can search the Eventbrite API of events their area to help make new memories with their growing family.
 
-HelloWorld was developed as a project for the January 2015 General Assembly Web Development Immersive course. It was developed over a week-long sprint to gain experience with authentication/authroziation, ActiveRecord relations, APIs, and CRUD applications.
+memori was developed as a project for the January 2015 General Assembly Web Development Immersive course, over a week-long sprint to gain experience with authentication/authroziation, ActiveRecord relations, APIs, and CRUD applications.
 
 Technologies Used
 
@@ -48,9 +32,9 @@ As a User I would like to be able to update the information on my children as th
 As an Admin, I would like to use Heroku Scheduler to make send texts to keep me from having to do so manually
 
 Links:
-Production Site on Heroku:
-Github:
-Trello
+Production Site on Heroku: https://memorirocks.herokuapp.com/
+Github: https://github.com/ericsorrells/memori
+Trello: https://trello.com/b/bkeOGDJc/memori
 
 Process Documents:
 ERD

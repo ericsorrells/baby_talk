@@ -11,9 +11,9 @@ class BabiesController < ApplicationController
     @baby = Baby.find(params[:id])
     if @baby.update_attributes(baby_params)
       flash[:success] = "Baby Information Updated!"
-      redirect_to user_path(current_user.id), notice: "Your Baby's Info Was Sucessfully Edited!"
+      redirect_to user_path(current_user.id)
     else
-      render 'new'
+      render 'edit'
     end
   end
 
