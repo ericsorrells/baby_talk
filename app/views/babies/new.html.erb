@@ -7,6 +7,7 @@
           <h3>Add A New Baby:</h3> 
         </div>
           <%= form_for(@baby) do |f| %>
+            <%= render 'shared/error_messages', object: f.object %>
             <%= f.text_field :name, placeholder: "Name", class: "field_format field_width margin"   %>
             <br>
             <%= f.select :sex, options_for_select([['Female','F'], ['Male', 'M']]), {}, class: "btn btn-primary dropdown-toggle field_width margin"  %>
