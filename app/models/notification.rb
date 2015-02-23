@@ -9,13 +9,14 @@ class Notification < ActiveRecord::Base
     auth_token = 'a6489d91a6ae5f484696fcf45963f893'
     
     all_users = User.all
-    
+
     all_users.each do |user|
+        puts "USER NAME: #{user.name}"
       question_id = Question.get_unanswered_questions(user)[0]
-      # puts "QUESTION ID: #{question_id}"
+       puts "QUESTION ID: #{question_id}"
       message = Question.get_question_content(question_id)
-      # puts "MESSAGE: #{message}"
-      # puts "USER PHONE: #{user.phone}"
+       puts "MESSAGE: #{message}"
+       puts "USER PHONE: #{user.phone}"
 
       number_to_send_to = user.phone
 
