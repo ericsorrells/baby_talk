@@ -40,6 +40,7 @@ class UsersController < ApplicationController
   end
 
   def update
+    puts "UPDATE: params = #{params}"
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
       puts "UPDATED: #{@user.name}"
