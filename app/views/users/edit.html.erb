@@ -5,38 +5,29 @@
     <div class="row">
       <div class="col-xs-12 center">        
         <h3>Update Your Profile:</h3>
-        <form>        
-          <div class="form-group">
-            <%= form_for(@user) do |f| %>
-            <%= render 'shared/error_messages', object: f.object %>
-          <div class="form-group">        
-            <%= f.text_field :name, :placeholder => "Name", :size => 50  %>
-          </div>
-          <div class="form-group"> 
-            <%= f.text_field :email, :placeholder => "Email", 
-              class: "field_format", :size => 50  %>
-          </div>
-          <div class="form-group">
-            <%= f.text_field :phone, 
-              class: "field_format", :placeholder => "Phone", :size => 50 %>
-          </div>
-          <div class="form-group">
-            <%= f.password_field :password, :placeholder => "Password", 
-              :size =>50 %>
-          </div>
-          <div class="form-group">
-            <%= f.password_field :password_confirmation, 
-              :placeholder => "Password Confirmation", :size => 50 %>
-          </div>
-            <%= f.submit "Update Your Profile", 
-              class: "btn btn-large btn-primary submit_width" %>
-            <% end  %>
-          </div>
+          <%= form_for(@user) do |f| %>
+              <%= render 'shared/error_messages', object: f.object %>
+              <%= f.text_field :name, :placeholder => "Name", class: "form-group field_width" %>
+              <br>
+              <%= f.text_field :email, :placeholder => "Email", class: "form-group field_width" %>
+              <br>
+              <%= f.text_field :phone, :placeholder => "Phone", class: "form-group field_width" %>
+              <br>
+              <%= f.password_field :password, :placeholder => "Password", class: "form-group field_width"%>
+              <br>
+              <%= f.password_field :password_confirmation, :placeholder => "Password Confirmation",
+                   class: "form-group field_width" %>
+              <br>
+              <%= f.submit "Update Your Profile", class: "btn btn-large btn-primary submit_width" %>
+          <% end %>
+
+          <br>
 
           <div>
             <%= link_to "Delete Account", @user, method: :delete, 
               data: { confirm: 'Are you sure?' }, 
               class: "btn btn-large btn-danger submit_width" %>
-      </div>
+          </div>
+          <br>
     </div>
  </div>   
