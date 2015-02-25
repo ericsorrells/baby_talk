@@ -37,5 +37,10 @@ Github: https://github.com/ericsorrells/memori
 Trello: https://trello.com/b/bkeOGDJc/memori
 
 Process Documents:
-![ERD]([Imgur](http://i.imgur.com/9WFdY39.jpg))
-Wireframes
+ERD: ([Imgur](http://i.imgur.com/9WFdY39.jpg))
+Wireframes:
+[Imgur](http://i.imgur.com/mhgPjKV.jpg)
+[Imgur](http://i.imgur.com/OIg40zD.jpg)
+[Imgur](http://i.imgur.com/H722rDL.jpg)
+[Imgur](http://i.imgur.com/MqVTboO.jpg)
+[Imgur](http://i.imgur.com/68lov6V.jpg)
