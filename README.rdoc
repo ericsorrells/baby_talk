@@ -20,7 +20,7 @@ Testing using rspec-rails and capybara
 Front-end design & development from scratch
 
 User Stories Completed:
-As a User I want to be able to Sign In securely to make sure my personal info is protected <hr>
+As a User I want to be able to Sign In securely to make sure my personal info is protected
 As a User I want to be able to see all my questions in one place to help organize the process
 As a User I want to be able to send/receive text messages with questions/answers to make keeping track of journal questions easier
 As a User I want to be able to Sign Out and be sure my session has ended
@@ -37,10 +37,10 @@ Github: https://github.com/ericsorrells/memori
 Trello: https://trello.com/b/bkeOGDJc/memori
 
 Process Documents:
-ERD: ([Imgur](http://i.imgur.com/9WFdY39.jpg))
+ERD: (http://i.imgur.com/9WFdY39.jpg))
 Wireframes:
 (http://i.imgur.com/mhgPjKV.jpg)
-(http://i.imgur.com/OIg40zD.jpg)<br>
+(http://i.imgur.com/OIg40zD.jpg)
 (http://i.imgur.com/H722rDL.jpg)
 (http://i.imgur.com/MqVTboO.jpg)
 (http://i.imgur.com/68lov6V.jpg)
