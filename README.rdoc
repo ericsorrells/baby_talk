@@ -40,7 +40,7 @@ Process Documents:
 ERD: http://i.imgur.com/9WFdY39.jpg
 Wireframes:
 http://i.imgur.com/mhgPjKV.jpg
-(http://i.imgur.com/OIg40zD.jpg)
-(http://i.imgur.com/H722rDL.jpg)
-(http://i.imgur.com/MqVTboO.jpg)
+http://i.imgur.com/OIg40zD.jpg
+http://i.imgur.com/H722rDL.jpg
+http://i.imgur.com/MqVTboO.jpg
 http://i.imgur.com/68lov6V.jpg
