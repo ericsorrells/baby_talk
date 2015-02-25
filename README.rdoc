@@ -32,10 +32,10 @@ As a User I would like to be able to update the information on my children as th
 As an Admin, I would like to use Heroku Scheduler to make send texts to keep me from having to do so manually
 
 Links:
-Production Site on Heroku: https://memorirocks.herokuapp.com/
+Heroku: https://memorirocks.herokuapp.com/
 Github: https://github.com/ericsorrells/memori
 Trello: https://trello.com/b/bkeOGDJc/memori
 
 Process Documents:
-ERD
+![ERD]([Imgur](http://i.imgur.com/9WFdY39.jpg))
 Wireframes
