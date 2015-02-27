@@ -13,14 +13,18 @@ describe Baby do
   it { should be_valid }
 
   describe 'validations' do
-    context 'when not provided' do
-      describe 'when a name is not provided' do
-        before { baby.name = ' ' }
+    describe 'name' do
+      context 'not provided' do
+          before { baby.name = nil }
+          it { should_not be_valid }
+        end
+
+      context 'too short' do 
+        before { baby.name = 'AB'}
         it { should_not be_valid }
       end
     end
   end
-
 end
 
 # describe User do
