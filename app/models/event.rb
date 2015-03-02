@@ -6,4 +6,3 @@ class Event < ActiveRecord::Base
   end
   
 end
-#HTTParty.get("https://www.eventbriteapi.com/v3/events/search/?q=kids&venue.city=atlanta&venue.region=ga&categories=113&date_modified.keyword=this_week&token=2JHYIBZXSHPPY7PLRDSO")

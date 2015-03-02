@@ -8,9 +8,7 @@ class Notification < ActiveRecord::Base
     account_sid = 'ACc1f381ba5f70dc60e3417c5ebb6ad1df' 
     auth_token = 'a6489d91a6ae5f484696fcf45963f893'
     
-    all_users = User.all
-
-    all_users.each do |user|
+    User.all.each do |user|
         puts "USER NAME: #{user.name}"
       question_id = Question.get_unanswered_questions(user)[0]
        puts "QUESTION ID: #{question_id}"

@@ -21,33 +21,26 @@ class UsersController < ApplicationController
   end
   
   def create
-    puts "CREATE: params = #{params}"
     @user = User.new(user_params)
-    puts "About to save user: #{@user.inspect}"
     if @user.save
       sign_in @user
       flash[:success] = "Account Successfully Created!"
       redirect_to user_path(@user)
     else
-      render 'edit'
+      render 'new'
     end
   end
 
   def edit
-    puts "EDIT START"
       @user = User.find(params[:id])
-    puts "EDIT END: #{@user.name}"
   end
 
   def update
-    puts "UPDATE: params = #{params}"
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
-      puts "UPDATED: #{@user.name}"
       flash[:success] = "Profile Updated!"
       redirect_to user_path @user
     else
-      puts "NO UPDATE: #{@user.name}"
       render 'edit'
     end
   end
@@ -69,9 +62,7 @@ class UsersController < ApplicationController
       #gets user, and compares it to current user
       ##if different, redirects to home page
       @user = User.find(params[:id])
-      puts "CORRECT USER [before]: #{@user.id}"
       redirect_to(root_path) unless current_user?(@user)
-      puts "CORRECT USER [after]: #{@user.id}"
     end
 
     def admin_user

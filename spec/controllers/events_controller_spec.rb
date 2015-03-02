@@ -7,5 +7,9 @@ describe EventsController do
       get :show_events
       expect(response).to render_template(:show_events)
     end
+
+    it 'returns an event' do
+     # @events = Event.events(115, 'kids', 'Atlanta', 'GA', 'this_week')
+    end
   end
 end
