@@ -1,7 +1,6 @@
+<% provide(:title, 'All Users') %> 
+
 <% @users.each do |user| %>
 Name: <%= link_to user.name, user %> - Email: <%= user.email %> - 
-<% if current_user.admin? && !current_user?(user) %>
-| <%= link_to "Delete", user, method: :delete, data: { confirm: "You sure?" } %>
-<% end %>
 <br>
 <% end %>

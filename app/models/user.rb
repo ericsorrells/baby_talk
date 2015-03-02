@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
   has_many :answers, dependent: :destroy
+  has_many :questions, through: :answers
+
   has_many :babies,  dependent: :destroy
 
   #ensures email is formatted
@@ -34,6 +36,10 @@ class User < ActiveRecord::Base
   def User.digest(token)
     #accepts token from new_remember_token and digests it
     Digest::SHA1.hexdigest(token.to_s)
+  end
+
+  def answered_questions
+    self.answers.where.not(content: nil).questions
   end
 
   private

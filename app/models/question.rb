@@ -1,9 +1,11 @@
 class Question < ActiveRecord::Base
-  has_many    :answers, dependent: :destroy
+  has_many :answers, dependent: :destroy
+  has_many :users, through: :answers
 
   validates :sequence, presence: true   
-  validates :content,  presence: true, length: { minimum: 15 } 
-  
+  validates :content,  presence: true, length: { minimum: 15 }
+
+
   def self.get_answered_questions(user)
     answers = user.answers.pluck(:question_id) #get all answers
     questions = Question.all.pluck(:id) #get all questions
@@ -17,7 +19,7 @@ class Question < ActiveRecord::Base
   end
 
   def self.get_question_content(question_id)
-    Question.where('id = ?', question_id).pluck(:content).first
+    Question.find(question_id).content
   end
 
 end

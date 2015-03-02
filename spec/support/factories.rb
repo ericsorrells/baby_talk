@@ -1,0 +1,36 @@
+FactoryGirl.define do
+  factory :user do
+    sequence(:name) { |n| "Name Number #{n}"}
+    email { Faker::Internet.email }
+    password "foobar"
+    password_confirmation "foobar"
+  end
+
+  factory :question do
+    sequence (1..50).to_a.sample
+    content { Faker::Lorem.sentence(3) }
+  end
+end
+
+# FactoryGirl.define do
+#   factory :user do
+#     sequence(:name) { |n| "Name Number #{n}"} # first user's name will be Name Number 1
+#     email { Faker::Internet.email }
+#     password "foobar"
+#     password_confirmation "foobar"
+
+#     factory :admin, parent: :user do
+#       email "rgpass@gmail.com"
+#       admin true
+#     end
+#   end
+
+#   factory :item do
+#     sequence(:name) { |n| "Item Number #{n}" }
+#     rating (1..5).to_a.sample
+#     price (5..30).to_a.sample
+#     description { Faker::Lorem.sentence(3) }
+#     image_file "random_thing.png"
+#     user
+#   end
+# end
