@@ -1,12 +1,12 @@
 <% provide(:title, 'All Events') %> 
 
  <div class="container">
-    <div class="row">
+    <div class="row min_height">
       <div class="col-xs-12 center"> 
         <div class="page-header">
           <h3>Events In Your Area:</h3>
        </div>     
-        <% if @events.empty? %>
+        <% if @events.nil? %>
           <h3>Sorry! There Are No Events Currently Scheduled In Your Area</h3>
         <% else %>
           <% @events.each do |event| %>

@@ -1,8 +1,8 @@
 <% provide(:title, 'Your Profile') %> 
 
-<div class="container">
+<div class="container ">
   <div class="row">
-    <div class="col-sm-12 col-lg-6 float_left" >
+    <div class="col-sm-6 col-lg-6 float_left min_height" >
       <div class="page-header">
         <h3>Your Account Info: </h3>
       </div>
@@ -15,7 +15,7 @@
         </div>
     </div>
  
-  <div class="col-sm-12 col-lg-6 float_right">
+  <div class="col-sm-6 col-lg-6 float_right min_height">
     <div class="page-header">
       <h3>Your Children: </h3>
     </div>
@@ -29,11 +29,11 @@
   </div>
 
   <div class="row">
-    <div class="col-sm-12 col-lg-6 float_left" >
+    <div class="col-sm-12 col-lg-6 float_left margin" >
       <%= link_to "Edit Your Profile", edit_user_path(current_user), class: "btn btn-primary width" %>
     </div>
 
-    <div class="col-sm-12 col-lg-6 float_left" >
+    <div class="col-sm-12 col-lg-6 float_left margin" >
         <%= link_to "Add A New Baby", new_baby_path, class: "btn btn-primary width" %>
     </div>
     <br>

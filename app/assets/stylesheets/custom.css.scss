@@ -18,9 +18,19 @@ $grayLight: 999;
 
 /* Bootstrap Overrides */
 
+.min_height {
+  height: auto;
+  min-height: 500px;
+}
+
 .no_padding {
     padding-left: 0px !important;
     padding-right: 0px !important;
+}
+
+.alert {
+  margin-top: 30px;
+  margin-bottom: 0px;
 }
 
 
@@ -43,6 +53,7 @@ $grayLight: 999;
     background-image: none;
     background-color: #58718e;
 }
+
 
 
   /* Navbar Customization */
@@ -85,6 +96,7 @@ $grayLight: 999;
   border-color: #669db0; 
   background-color: #669db0; 
 }
+
 
   /* Various Other*/
 
